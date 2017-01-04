@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_icon_chip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.devexchanges.chiplayout.IconChipActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_chip_icon_drawable">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/icon_height"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/midu"
+            app:civ_border_color="#FF000000" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/icon"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingLeft="@dimen/padding_top"
+            android:paddingBottom="@dimen/padding_top"
+            android:text="Đặng Thị Mỹ Dung"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="@dimen/remove_icon_dimen"
+            android:layout_height="@dimen/remove_icon_dimen"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/text"
+            android:padding="@dimen/remove_icon_margin"
+            android:layout_marginLeft="@dimen/remove_icon_margin"
+            android:layout_marginRight="@dimen/remove_icon_margin"
+            android:contentDescription="@null"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+
+</RelativeLayout>
