@@ -13,9 +13,9 @@ import com.tokenautocomplete.FilteredArrayAdapter;
 
 import java.util.List;
 
-public class FilterAdapter extends FilteredArrayAdapter<ContactView> {
+public class FilterAdapter extends FilteredArrayAdapter<SimpleContact> {
 
-    public FilterAdapter(Context context, int resource, List<ContactView> objects) {
+    public FilterAdapter(Context context, int resource, List<SimpleContact> objects) {
         super(context, resource,  objects);
     }
 
@@ -28,7 +28,7 @@ public class FilterAdapter extends FilteredArrayAdapter<ContactView> {
             convertView = layoutInflater.inflate(R.layout.item_contact, parent, false);
         }
 
-        ContactView contact = getItem(position);
+        SimpleContact contact = getItem(position);
         ((TextView) convertView.findViewById(R.id.name)).setText(contact != null ? contact.getName() : null);
         ((TextView) convertView.findViewById(R.id.email)).setText(contact != null ? contact.getEmail() : null);
         assert contact != null;
@@ -38,7 +38,7 @@ public class FilterAdapter extends FilteredArrayAdapter<ContactView> {
     }
 
     @Override
-    protected boolean keepObject(ContactView person, String mask) {
+    protected boolean keepObject(SimpleContact person, String mask) {
         mask = mask.toLowerCase();
         return person.getName().toLowerCase().startsWith(mask) || person.getEmail().toLowerCase().startsWith(mask);
     }

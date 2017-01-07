@@ -1,11 +1,11 @@
 package info.devexchanges.chipedittext;
 
-public class ContactView {
+public class SimpleContact {
     private int drawableId;
     private String name;
     private String email;
 
-    public ContactView(int drawableId, String name, String email) {
+    public SimpleContact(int drawableId, String name, String email) {
         this.drawableId = drawableId;
         this.name = name;
         this.email = email;
@@ -13,10 +13,6 @@ public class ContactView {
 
     public int getDrawableId() {
         return drawableId;
-    }
-
-    public void setDrawableId(int drawableId) {
-        this.drawableId = drawableId;
     }
 
     public String getName() {
@@ -31,7 +27,8 @@ public class ContactView {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    @Override
+    public String toString() {
+        return getName() + "|" + getEmail();
     }
 }

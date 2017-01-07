@@ -24,6 +24,6 @@ public class TokenTextView extends TextView {
     @Override
     public void setSelected(boolean selected) {
         super.setSelected(selected);
-        setCompoundDrawablesWithIntrinsicBounds(0, 0, selected ? R.drawable.ic_clear_black_24dp : 0, 0);
+        setCompoundDrawablesWithIntrinsicBounds(0, 0, selected ? R.drawable.ic_clear_white_18dp : 0, 0);
     }
 }

@@ -9,16 +9,18 @@
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:contentDescription="@null" />
 
-    <TextView
-        android:id="@+id/text"
+    <info.devexchanges.chipedittext.TokenTextView
+        android:id="@+id/token_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/icon"
-        android:paddingRight="8dp"
         android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:textStyle="bold" />
 
 </RelativeLayout>
